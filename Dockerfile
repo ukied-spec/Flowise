@@ -14,7 +14,7 @@ RUN apk add --no-cache chromium
 
 #install PNPM globaly
 RUN npm install -g pnpm
-
+ENV NODE_OPTIONS=--max_old_space_size=2048
 ENV PUPPETEER_SKIP_DOWNLOAD=true
 ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 
